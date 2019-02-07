@@ -1,0 +1,4 @@
+export const CHANGE_PLACE = 'CHANGE_PLACE';
+export const FETCH_WEATHER = 'FETCH_WEATHER';
+export const SET_FORECASTS = 'SET_FORECASTS';
+
