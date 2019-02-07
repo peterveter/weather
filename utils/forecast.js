@@ -1,4 +1,4 @@
-import weatherIcons from '../assets/weatherIcons';
+import weatherIcons from '~/constants/weatherIcons';
 
 export const getDayTime = date => {
   const time = new Date(date);

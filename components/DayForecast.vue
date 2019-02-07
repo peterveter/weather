@@ -105,9 +105,9 @@ export default {
     getLocation() {
       return getLocation(this.city);
     },
-    getImagePath(){
+    getImagePath() {
       return getImagePath(this.forecast);
-    }
+    },
   },
 };
 </script>
