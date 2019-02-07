@@ -58,3 +58,21 @@ export const getLocation = city => {
   }
   return 'Unknown';
 };
+
+export const getRealLong = lng => {
+  const factor = (lng - (lng % 180)) / 180;
+  if (lng > 180) {
+    if (factor % 2 === 0) {
+      lng = 0 + (lng % 180);
+    } else {
+      lng = -180 + (lng % 180);
+    }
+  } else if (lng < -180) {
+    if (factor % 2 === 0) {
+      lng = 0 + (lng % 180);
+    } else {
+      lng = 180 + (lng % 180);
+    }
+  }
+  return lng;
+};
