@@ -1,4 +1,4 @@
-import * as types from '../constants/mutationTypes';
+import * as types from '~/constants/mutationTypes';
 
 export default {
   [types.CHANGE_PLACE](state, payload) {

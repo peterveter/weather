@@ -1,5 +1,5 @@
 import apiClient from '.';
-import { weatherEndpoints } from '../constants/endpoints';
+import { weatherEndpoints } from '~/constants/endpoints';
 
 const normalizeResponse = ({ city, list }) => {
   const forecasts = list.filter(item => list.indexOf(item) % 8 === 0);

@@ -2,7 +2,7 @@
   <div class="flex flex-col h-screen text-center bg-teal-light">
     <div class="flex h-full shadow-lg lg:mx-2">
       <no-ssr>
-        <leaflet-map></leaflet-map>
+        <leaflet-map class="min-w-card-md"></leaflet-map>
       </no-ssr>
     </div>
     <div class="flex w-full h-full">
@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import LeafletMap from '../components/LeafletMap';
-import DaysForecast from '../components/DaysForecast';
+import LeafletMap from '~/components/LeafletMap';
+import DaysForecast from '~/components/DaysForecast';
 import { mapState } from 'vuex';
 
 export default {
@@ -22,7 +22,7 @@ export default {
     DaysForecast,
   },
   computed: {
-    ...mapState(['currentPlace']),
+    ...mapState(['currentPlace', 'forecasts']),
   },
   async asyncData({ store }) {
     await store.dispatch('fetchWeather', store.state.currentPlace);

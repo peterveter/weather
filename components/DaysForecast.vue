@@ -12,7 +12,7 @@
 </template>
 <script>
 import { mapState } from 'vuex';
-import DayForecast from '../components/DayForecast';
+import DayForecast from './DayForecast';
 
 export default {
   components: {

@@ -1,37 +1,5 @@
 import weatherIcons from '~/constants/weatherIcons';
 
-export const getDayTime = date => {
-  const time = new Date(date);
-  const days = [
-    'Sunday',
-    'Monday',
-    'Tuesday',
-    'Wednesday',
-    'Thursday',
-    'Friday',
-    'Saturday',
-  ];
-  const months = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December',
-  ];
-
-  const weekDay = days[time.getDay()];
-  const month = months[time.getMonth()];
-  const day = time.getDate();
-  return `${weekDay}, ${day} ${month}`;
-};
-
 const getIconName = forecast => {
   const code = forecast.weather[0].id;
   let time = new Date(forecast.dt_txt).getHours();
@@ -49,7 +17,7 @@ const getIconName = forecast => {
 
 export const getImagePath = forecast => {
   const icon = getIconName(forecast);
-  return require(`../assets/svg/${icon}.svg`);
+  return require(`~/assets/svg/${icon}.svg`);
 };
 
 export const getLocation = city => {

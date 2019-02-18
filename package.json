@@ -16,6 +16,7 @@
     "@fortawesome/vue-fontawesome": "^0.1.5",
     "@nuxtjs/axios": "^5.3.6",
     "cross-env": "^5.2.0",
+    "moment": "^2.24.0",
     "nuxt": "^2.3.4",
     "r3shaper": "^0.1.4",
     "vue2-leaflet": "^1.2.3"

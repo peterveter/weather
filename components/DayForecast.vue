@@ -76,8 +76,8 @@
         class="font-sans text-teal-lightest font-normal text-lg mt-1"
       >{{forecast.weather[0].description}}</div>
     </div>
-    <div class="flex justify-center mt-4">
-      <div class="flex w-24 h-24">
+    <div class="flex justify-center items-center mt-4 pb-2">
+      <div class="flex justify-center items-center md:w-24 md:h-24 h-16 w-16">
         <img :src="getImagePath()">
       </div>
     </div>
@@ -85,7 +85,8 @@
 </template>
 
 <script>
-import { getDayTime, getImagePath, getLocation } from '../utils/forecast';
+import { getImagePath, getLocation } from '~/utils/forecast';
+import moment from 'moment';
 
 export default {
   props: {
@@ -100,7 +101,7 @@ export default {
   },
   methods: {
     getDayTime() {
-      return getDayTime(this.forecast.dt_txt);
+      return moment(this.forecast.dt_txt).format('dddd, D MMMM');
     },
     getLocation() {
       return getLocation(this.city);
